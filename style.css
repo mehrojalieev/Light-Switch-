@@ -3,3 +3,223 @@
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+      flex-direction: row;
+    gap: 2em;
+    
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    
+    background-color: #1C1C25;
+    font-family: 'Montserrat';
+  }
+  
+  
+  
+  /* ---------- MAIN STYLES FOR BUTTON ---------- */
+  .button {
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    
+    background-color: #25252F;
+    filter: drop-shadow(0 10px 0 #101016);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    
+    cursor: pointer;
+    transition: all ease 0.1s;
+    
+    position: relative;
+    top: -10px;
+  }
+  
+  .fa {
+    color: #656572;
+  }
+  
+  .button:hover {
+    transform: translate(0, 10px);
+    filter: none;
+    clip-path: circle(50%);
+  }
+  
+  .button:hover > .fa {
+    color: #C4C4C4;
+  }
+  
+  
+  .button:active {
+    filter: drop-shadow(0 -10px 0 #101016);
+    transform: translate(0, 20px);
+    clip-path: circle(50% at 50px 40px);
+    background-color: #21212A;
+  }
+  
+  /* ---------- END OF MAIN STYLES FOR BUTTON ---------- */
+  
+  
+  /* ------------- */
+  
+  
+  /* ---------- BEGINNING OF THE REST OF STYLES / OPTIONAL ---------- */
+  
+  .cont {
+    background-color: #25252F;
+    border-radius: 15px;
+    transition: all ease 0.3s;
+    filter: drop-shadow(0 0 10px rgb(0,0,0,30%));
+    border: solid 0.5px #25252F;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    
+    padding: 20px;
+  }
+  
+  .cont:hover {
+    background-color: #2D2D38;
+    border: solid 0.5px #97979B;
+  }
+  
+  .cont2 {
+    height: 200px;
+    width: 200px;
+    background-color: #1C1C25;
+    border-radius: 10px;
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #656572;
+    font-size: 20px;
+  }
+  
+  .button:hover > a {
+    color: #C4C4C4;
+  }
+  
+  
+  .screws {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 150px;
+  }
+  
+  .screw {
+    height: 10px;
+    width: 10px;
+    background-color: #3B3B44;
+    border-radius: 100%;
+  }
+  
+  .link {
+    background-color: #1C1C25;
+  
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    color: #DBDBD4;
+    padding: 20px;
+  }
+  
+  .link-cont > .cont {
+    height: 60px;
+  }
+  
+  .link-button {
+    border-radius: 5px;
+    background-color: #44AC9E; 
+    height: auto;
+    width: auto;
+    padding: 15px 20px;
+    font-weight: bold;
+    filter: drop-shadow(0 10px 0 #267267);
+    clip-path: inset(0% 0% -50% 0% round 5px);
+  
+  }
+  
+  .link-button:hover {
+    clip-path: inset(0% 0% 0% 0% round 5px);
+    
+  }
+  
+  .link-button:active {
+    background-color: #3D9A8E;
+    clip-path: inset(-30% 0% 20% 0% round 5px);
+    filter: drop-shadow(0 -10px 0 #267267);
+  }
+  
+  .link-button > a {
+    color: #267267;
+    font-size: 16px;
+  }
+  
+  .link-button:hover > a {
+     color: #267267;
+  }
+  
+  
+  .link-cont {
+    visibility: hidden;
+    display: none;
+  }
+  
+  .link-cont.visible {
+    display: flex;
+    visibility: visible;
+  }
+  
+  .link-main {
+    position: absolute;
+    z-index: 10;
+    left: 20%;
+  }
+  
+  .backdrop {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(29, 29, 38, 90%);
+    z-index: 5;
+    left: 0px;
+    border-radius: 15px;
+    display: none;
+    visibility: hidden;
+  }
+  
+  .backdrop.visible {
+    display: block;
+    visibility: visible;
+    cursor: pointer;
+  }
+  
+  .button-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 10px;
+  }
+  
+  p {
+    color: #C4C4C4;
+    line-height: 0;
+    font-size: 14px;
+  }
